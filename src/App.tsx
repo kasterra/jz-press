@@ -1,8 +1,13 @@
-import React from "react";
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
 import ResultScreen from "./pages/ResultScreen";
 
 function App() {
-  return <ResultScreen />;
+  return (
+    <ThemeProvider theme={theme}>
+      <ResultScreen />
+    </ThemeProvider>
+  );
 }
 
 export default App;
